@@ -10,7 +10,7 @@
 <body>
  <!-- Barra lateral con mi información de contacto , habilidades y cursos de platzi -->
  <header class="header">
-   <i class="icon-menu burger-button"></i>
+   <i class="icon-menu burger-button" id="burger-menu"></i>
    <div class="shadow">
      <div class="container-menu-background">
        <div class="container-menu">
@@ -21,13 +21,13 @@
          <nav class=menu>
            <ul class="list">
              <li class="list-item">
-               <a href="#">Contact</a>
+               <a href="#contact">Contact</a>
              </li>
              <li class="list-item">
-               <a href="#">Skills</a>
+               <a href="#Skills">Skills</a>
              </li>
              <li class="list-item">
-               <a href="#">Training</a>
+               <a href="#training">Training</a>
              </li>
            </ul>
          </nav>
@@ -67,7 +67,7 @@
   </div>
  </section>
 
- <section class="skills">
+ <section class="skills" id="Skills">
   <div class="container">
    <h2 class="section-title">
    Skills
@@ -229,7 +229,7 @@
   </div>
  </section>
 
- <section class="training">
+ <section class="training" id= "training">
   <div class="container">
    <h2 class="section-title">
     Training
@@ -293,7 +293,7 @@
   <!-- <h2 class="section-title">
    Contact
   </h2> -->
- <section class="contact">
+ <section class="contact" id="contact">
   <div class="container">
    <form action="/subscription/" class="contact-form">
     <h3 class="contact-question">
@@ -332,6 +332,20 @@
    </div>
   </div>
  </footer>
+<script>
+  const menu = document.querySelector('.menu');
+  const burgerButton = document.querySelector('#burger-menu');
+  // console.log(document.querySelector('#burger-menu'));
+  burgerButton.addEventListener('click',hideShow);
 
+  function hideShow () {
+    if(menu.classList.contains('is-active')){
+      menu.classList.remove('is-active');      
+    }else{
+      menu.classList.add('is-active');
+    }
+  }
+
+</script>
 </body>
 </html>
