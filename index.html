@@ -340,6 +340,8 @@
   // console.log(document.querySelector('#burger-menu'));
 
   ipad.addListener(validation)
+  // burgerButton.addEventListener('touchstart',hideShow);
+  // burgerButton.addEventListener('click',hideShow);
 
   function validation(event){
     if(event.matches = true){
@@ -347,8 +349,12 @@
     } else{
       burgerButton.removeEventListener('click',hideShow);
     }
+//     Metodo toggle añade o quita clase en funcion del estado inicial cuando
+//     ocurre el evento.
+//      burgerButton.addEventListener('click', function() {
+// 	    menu.classList.toggle('is-active')
+//      })
   }
-  burgerButton.addEventListener('touchstart',hideShow);
 
   function hideShow () {
     if(menu.classList.contains('is-active')){
